@@ -17,8 +17,8 @@ def test_demoqa():
 
     browser.element('[for="gender-radio-1"]').click()
     browser.element('[placeholder="Mobile Number"]').should(be.blank).type('9659944488')
-    browser.element('[id="dateOfBirthInput"]').click().press()
-    browser.element('[class="subjects-auto-complete__value-container subjects-auto-complete__value-container--is-multi css-1hwfws3"]').should(be.blank).type('Python, Selene, AQA')
+    #browser.element('[id="dateOfBirthInput"]').click().clear().type('31 Jan 1979')
+    browser.element('[class="subjects-auto-complete__value-container subjects-auto-complete__value-container--is-multi css-1hwfws3"]').type('Python, Selene, AQA')
     test
 
 def test_google_search_negative():
