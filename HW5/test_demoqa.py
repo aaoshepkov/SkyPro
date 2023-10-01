@@ -16,10 +16,10 @@ def test_demoqa():
     browser.element('[class="react-datepicker__day react-datepicker__day--031"]').click()
     browser.element('#subjectsInput').type('computer science').press_enter()
     browser.element('[for="hobbies-checkbox-1"]').click()
-    browser.element('#uploadPicture').send_keys(os.path.abspath('files/jenkins.png'))
+    browser.element('#uploadPicture').send_keys(os.path.abspath('files/jenkins.png')) #как работает модуль send_keys  и то что внутри него?
     browser.element('#currentAddress').type('Planet Earth')
     browser.element('#react-select-3-input').type('NCR').press_enter()
     browser.element('#react-select-4-input').type('Delhi').press_enter()
     browser.element('#submit').click()
-
+#как лучше искать инфу по документации на selene? например, как найти инфу по полной проверке страницы и элементов на ней?
     browser.element(all())
