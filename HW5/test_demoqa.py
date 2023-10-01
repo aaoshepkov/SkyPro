@@ -29,7 +29,15 @@ def test_demoqa():
 
     browser.element('[for="hobbies-checkbox-1"]').click()
 
-    browser.element('[for="uploadPicture"]').send_keys(os.path.abspath('files/jenkins.png'))
+    browser.element('#uploadPicture').send_keys(os.path.abspath('files/jenkins.png'))
+
+    browser.element('#currentAddress').type('Planet Earth')
+
+    browser.element('#react-select-3-input').type('NCR').press_enter()
+
+    browser.element('#react-select-4-input').type('Delhi').press_enter()
+
+    browser.element('#submit').click()
 
 
 def test_google_search_negative():
