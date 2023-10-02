@@ -4,7 +4,7 @@ from selene.support.shared import browser
 
 
 def test_demoqa():
-    browser.open("https://demoqa.com/automation-practice-form")
+    browser.open('/automation-practice-form')
 
     browser.execute_script('document.querySelector("#fixedban").remove()')
     browser.element('footer').execute_script('element.remove()')
