@@ -22,4 +22,5 @@ def test_demoqa():
     browser.element('#react-select-4-input').type('Delhi').press_enter()
     browser.element('#submit').click()
 #как лучше искать инфу по документации на selene? например, как найти инфу по полной проверке страницы и элементов на ней?
+    # дальше должен быть сам тест с условиями should.have, should.be
     browser.element(all())
