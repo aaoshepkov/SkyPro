@@ -5,7 +5,6 @@ def test_dark_theme_by_time():
     """
     Протестируйте правильность переключения темной темы на сайте в зависимости от времени
     """
-    is_dark_theme = None
     current_time = time(hour=1)
     # TODO переключите темную тему в зависимости от времени суток (с 22 до 6 часов утра - ночь)
     if time(hour=22) <= current_time or current_time <= time(hour=6):
@@ -26,21 +25,24 @@ def test_dark_theme_by_time_and_user_choice():
     """
     current_time = time(hour=23)
     dark_theme_enabled_by_user = True
-    if current_time <= time(hour=6) or current_time >= time(hour=22):
-        is_dark_theme = True
+
+    if dark_theme_enabled_by_user is None:
+        if time(hour=22) <= current_time or current_time <= time(hour=6):
+            is_dark_theme = True
+        else:
+            is_dark_theme = False
     elif dark_theme_enabled_by_user is True:
         is_dark_theme = True
     elif dark_theme_enabled_by_user is False:
         is_dark_theme = False
-    else:
-        is_dark_theme = False
+
 
     # TODO переключите темную тему в зависимости от времени суток,
     #  но учтите что темная тема может быть включена вручную
 
     assert is_dark_theme is True
 
-    def test_find_suitable_user():
+def test_find_suitable_user():
         """
         Найдите нужного пользователя по условиям в списке пользователей
         """
@@ -54,10 +56,18 @@ def test_dark_theme_by_time_and_user_choice():
 
         # Найти пользователя с именем "Olga"
         suitable_users_olga = [user for user in users if user["name"] == "Olga"]
-        assert suitable_users_olga == [{"name": "Olga", "age": 45}]
+        for user in users:
+            if user["name"] == "Olga":
+                suitable_users_olga = user
+
+        assert suitable_users_olga == {"name": "Olga", "age": 45}
 
         # Найти всех пользователей младше 20 лет
-        suitable_users_young = [user for user in users if user["age"] < 20]
+        suitable_users_young = []
+        for user in users:
+            if user["age"] < 20:
+                suitable_users_young.append(user)
+
         assert suitable_users_young == [
             {"name": "Stanislav", "age": 15},
             {"name": "Maria", "age": 18},
@@ -73,19 +83,26 @@ def test_dark_theme_by_time_and_user_choice():
     # >>> open_browser(browser_name="Chrome")
     # "Open Browser [Chrome]"
 
-    def test_readable_function():
-        open_browser(browser_name="Chrome")
-        go_to_companyname_homepage(page_url="https://companyname.com")
-        find_registration_button_on_login_page(page_url="https://companyname.com/login", button_text="Register")
 
-    def open_browser(browser_name):
-        actual_result = None
-        assert actual_result == "Open Browser [Chrome]"
+def readable_function(func, *args):
+    func_name = func.__name__.replace('_', ' ').title()
+    arg_name = ", ".join([*args])
+    function_name = f'{func_name} [{arg_name}]'
+    print(function_name)
+    return function_name
+def test_readable_function():
+    open_browser(browser_name="Chrome")
+    go_to_companyname_homepage(page_url="https://companyname.com")
+    find_registration_button_on_login_page(page_url="https://companyname.com/login", button_text="Register")
 
-    def go_to_companyname_homepage(page_url):
-        actual_result = None
-        assert actual_result == "Go To Companyname Homepage [https://companyname.com]"
+def open_browser(browser_name):
+    actual_result = readable_function(open_browser, browser_name)
+    assert actual_result == "Open Browser [Chrome]"
 
-    def find_registration_button_on_login_page(page_url, button_text):
-        actual_result = None
-        assert actual_result == "Find Registration Button On Login Page [https://companyname.com/login, Register]"
+def go_to_companyname_homepage(page_url):
+    actual_result = readable_function(go_to_companyname_homepage, page_url)
+    assert actual_result == "Go To Companyname Homepage [https://companyname.com]"
+
+def find_registration_button_on_login_page(page_url, button_text):
+    actual_result = readable_function(find_registration_button_on_login_page, page_url, button_text)
+    assert actual_result == "Find Registration Button On Login Page [https://companyname.com/login, Register]"
