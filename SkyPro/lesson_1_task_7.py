@@ -1,9 +1,19 @@
-def number():
-    for _ in range(11):
-        num = int(input('Введите число:'))
-        my_list = [num, num, num, num, num, num, num, num, num, num, num]
-        my_list.append(num)
-    print(my_list)
-    return (number)
-number()
+number = ''
+def phone_number(num):
+    global number
+    num = str(num)
+    number = number + num
 
+phone_number(8)
+phone_number(8)
+phone_number(0)
+phone_number(0)
+phone_number(5)
+phone_number(5)
+phone_number(5)
+phone_number(3)
+phone_number(5)
+phone_number(3)
+phone_number(5)
+
+print(number)
