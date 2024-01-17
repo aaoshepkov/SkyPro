@@ -7,3 +7,5 @@
 [<img src=https://user-images.githubusercontent.com/125588671/270273298-7df7439a-85ec-401b-b4e4-10dd87113ead.svg height="60">](https://code.visualstudio.com/)
 [<img src=https://user-images.githubusercontent.com/125588671/270274245-3a66a88f-2788-4cab-a0b8-b89863932bd3.png height="60">](https://docs.pytest.org/en/7.4.x//)
 [<img src=https://user-images.githubusercontent.com/125588671/270273340-0fe26f6c-0682-40e2-afcc-940e1571fb97.svg height="60">](https://github.com/aaoshepkov)
+
+Здесь находятся выполненные задания из первой домашней работы курса по автоматизации тестирования.
