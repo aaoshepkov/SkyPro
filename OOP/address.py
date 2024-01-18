@@ -6,3 +6,6 @@ class Address:
         self.street = street
         self.building = building
         self.appartment = appartment
+
+    def new_adress(self):
+         self.
