@@ -16,6 +16,6 @@ set_phone_number(5)
 set_phone_number(3)
 set_phone_number(5)
 
-print(phone_number)
+print(phone_number, end='')
 
 
