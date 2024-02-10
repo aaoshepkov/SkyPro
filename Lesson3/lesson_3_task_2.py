@@ -6,7 +6,7 @@ def add_to_list(smart):
      global catalog
      smart = str(smart)
      catalog.append(smart)
-     #return catalog
+
 
 
 smartphone1 = Smartphone('Nokia', 'Lumia 930', '+7914705963')

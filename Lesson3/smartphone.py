@@ -8,8 +8,3 @@ class Smartphone:
     def __str__(self):
         return f'{self.brand} - {self.model}. {self.number}'
 
-    #def add_to_list(self):
-
-
-# smart1 = Smartphone('iPhone', '15 Pro Max', '+79659944488')
-# smart1.phone_()
