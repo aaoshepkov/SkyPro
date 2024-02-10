@@ -1,7 +1,4 @@
 class Smartphone:
-    phone_brand = ''
-    phone_model = ''
-    abon_number = '+79....'
 
     def __init__(self, phone_brand, phone_model, abon_number):
         self.brand = phone_brand

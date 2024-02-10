@@ -12,6 +12,4 @@ class User:
     def sayFull_name(self):
         print(self.first_name, self.last_name)
 
-new_user = User('Alex', 'Os')
 
-new_user.sayFull_name()
