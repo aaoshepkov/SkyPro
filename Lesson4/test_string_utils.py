@@ -1,35 +1,28 @@
-from task_1 import StringUtils
+from string_utils import StringUtils
 
+utils = StringUtils()
 
 def test_capitalize():
 
-    utils = StringUtils()
-
-    result = utils.capitalize('skypro')
+    result = utils.capitilize('skypro')
     assert result == 'Skypro'
-
 
 
 def test_trim():
 
-    utils = StringUtils()
-
-    result = utils.trim(' skypro')
-    assert result == 'skypro'
-
+    result = utils.trim(' skypro is good')
+    assert result == 'skypro is good'
 
 
 def test_to_list():
 
-    utils = StringUtils()
-
     result = utils.to_list('skypro, skyeng, python, english', ', ')
     assert result == ['skypro', 'skyeng', 'python', 'english']
 
+    result = utils.to_list(' ', '')
+    assert result == []
 
 def test_contains():
-
-    utils = StringUtils()
 
     result = utils.contains('skypro', 'y')
     assert result == True
@@ -40,8 +33,6 @@ def test_contains():
 
 def test_delete_symbol():
 
-    utils = StringUtils()
-
     result = utils.delete_symbol('skypro', 's')
     assert result == 'kypro'
 
@@ -50,8 +41,6 @@ def test_delete_symbol():
 
 
 def test_starts_with():
-
-    utils = StringUtils()
 
     result = utils.starts_with('skypro', 's')
     assert result == True
@@ -62,8 +51,6 @@ def test_starts_with():
 
 def test_end_with():
 
-    utils = StringUtils()
-
     result = utils.end_with('skypro', 's')
     assert result == False
 
@@ -73,8 +60,6 @@ def test_end_with():
 
 def test_is_empty():
 
-    utils = StringUtils()
-
     result = utils.is_empty('skypro')
     assert result == False
 
@@ -83,8 +68,6 @@ def test_is_empty():
 
 
 def test_list_to_string():
-
-    utils = StringUtils()
 
     result = utils.list_to_string(['skypro', 'is', '№', 1], ' ')
     assert result == 'skypro is № 1'
