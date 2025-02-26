@@ -4,7 +4,7 @@ utils = StringUtils()
 
 def test_capitalize():
 
-    result = utils.capitilize('skypro')
+    result = utils.capitalize('skypro')
     assert result == 'Skypro'
 
 
