@@ -1,4 +1,4 @@
-from string_utils import StringUtils
+from task_1 import StringUtils
 
 utils = StringUtils()
 
