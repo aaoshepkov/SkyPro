@@ -35,7 +35,8 @@ levels = {
 }
 
 
-#объявляем функцию для ввода пользователем уровня сложности, на котором он хотел бы поиграть. Функция возвращает словарь согласно выбранному уровню.
+'''объявляем функцию для ввода пользователем уровня сложности, на котором он хотел бы поиграть. 
+Функция возвращает словарь согласно выбранному уровню.'''
 def choose_difficulty():
     level = input('Выберите уровень сложности (легкий, средний, сложный): ')
     level = level.lower()
@@ -47,18 +48,17 @@ def choose_difficulty():
     elif level == 'сложный':
         words = words_hard
     else:
-        print('Жаль, похоже вы не хотите играть. Начните заново.')
-
+        words = words_medium
     return words
 
 words_to_play = choose_difficulty()
 
-'''объявляем функцию, которая перебирает словарь, соответствующий выбранному пользователем уровню сложности, и предлагает ввести перевод слова(ключа).
-Все верные ответы, записываем в созданный словарь answers со значение True, неверные с False'''
 
+'''объявляем функцию, которая перебирает словарь, соответствующий выбранному пользователем 
+уровню сложности, и предлагает ввести перевод слова(ключа).
+Все верные ответы, записываем в созданный словарь answers со значение True, неверные с False'''
 answers = {}
 def play_game(text):
-
     for word, value in text.items():
         print(f'{word}, {len(value)} букв, начинается на {value[0]}...')
         answer = input(f'Введите ваш ответ: ')
@@ -68,26 +68,20 @@ def play_game(text):
         else:
             print(f'Неверно. {word.capitalize()} - это {value.lower()}')
             answers[word] = False
-    #print(answers)
     return answers
 
 results = play_game(words_to_play)
 
 
-
-#объявляем функцию для вывода верных и неверных ответов.
+'''объявляем функцию для вывода верных и неверных ответов.'''
 def display_results(res):
     right_answers = {}
     wrong_answers = {}
     for word, answer in res.items():
-        #print('Правильно отвечены слова:')
         if answer is True:
             right_answers[word] = answer
-            #print(f'{word}')
-        #print('Неправильно отвечены слова:')
         if answer is False:
             wrong_answers[word] = answer
-            #print(f'{word}')
 
     right_answers = list(right_answers.keys())
     wrong_answers = list(wrong_answers.keys())
@@ -96,7 +90,8 @@ def display_results(res):
 
 display_results(results)
 
-#в этой функции считаем уровень по количеству верных ответов.
+
+'''в этой функции считаем уровень по количеству верных ответов.'''
 def calculate_rank(text):
     result = 0
     for value in text.values():
@@ -104,7 +99,7 @@ def calculate_rank(text):
             result += 1
         else:
             continue
-
-    print(f'Ваш ранг:\n{levels[result]}')
     return levels[result]
-calculate_rank(results)
+users_result = calculate_rank(results)
+
+print(f'Ваш ранг:\n{users_result}')
