@@ -57,5 +57,5 @@ for book in books:
         price = 'Цена не указана'
 
     print(f'Автор: {author} Название: "{title}" Текущая цена: {price}')
-print(f'По слову {word_search} всего найдено {len(books)}')
+print(f'По слову {word_search} всего найдено {len(books)} книг')
 
