@@ -1,11 +1,10 @@
 
-def is_year_leap(num):
-    entered_year = num
-    if num % 4 == 0:
-        print('год', entered_year, ':', 'True')
+def is_year_leap(year):
+    if year % 4 == 0:
+        print(f'Year {year} is leap: True')
     else:
-        print('год', entered_year, ':', 'False')
-is_year_leap(2026)
+        print(f'Year {year} is leap: False')
+is_year_leap(2025)
 
 
 # number = int(input('Введите год: '))
