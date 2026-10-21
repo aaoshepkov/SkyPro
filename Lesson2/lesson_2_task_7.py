@@ -5,4 +5,5 @@ def list_elements_sum():
     for i in(lst):
         sum += i
     print(sum)
-list_elements_sum()
+
+print(sum(lst))

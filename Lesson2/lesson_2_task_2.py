@@ -5,7 +5,7 @@ def is_year_leap(num):
         print('год', entered_year, ':', 'True')
     else:
         print('год', entered_year, ':', 'False')
-is_year_leap(2024)
+is_year_leap(2026)
 
 
 # number = int(input('Введите год: '))

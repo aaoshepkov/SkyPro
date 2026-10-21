@@ -50,5 +50,16 @@ def print0():
 result0 = print0()
 
 
-print(result8,result8,result0,result0,result5,result5,result5,result3,result5,result3,result5, sep='')
+result = [
+    result1, result2, result3, result4, result5, result6, result7, result8, result9, result0
+]
 
+def result_extraction(res):
+    final_result = ''
+    for i in res:
+        final_result += str(i)
+    return final_result
+
+
+
+print(result_extraction(result))

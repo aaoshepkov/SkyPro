@@ -1,3 +1,7 @@
-name = "Sasha"
+def sub(a, b):
+    return a - b
 
-print("Привет, "+ name)
+
+
+res = sub(10, 7)
+print(res)
