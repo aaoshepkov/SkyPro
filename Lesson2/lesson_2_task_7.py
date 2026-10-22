@@ -1,9 +1,10 @@
-lst = [11, 5, 8, 32, 15, 3, 20, 132, 21, 4, 555, 9, 20]
+lst_1 = [11, 5, 8, 32, 15, 3, 20, 132, 21, 4, 555, 9, 20]
 
-def list_elements_sum():
+def list_elements_sum(lst):
     sum = 0
     for i in(lst):
         sum += i
     print(sum)
 
-print(sum(lst))
+list_elements_sum(lst_1)
+print(sum(lst_1))
