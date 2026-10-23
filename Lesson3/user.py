@@ -13,11 +13,11 @@ class User:
         print(f'My last name is {self.last_name}')
 
     def sayFull_name(self):
-        print(self.first_name, self.last_name)
+        print(f'My full name is {self.first_name} {self.last_name}')
 
     def sayAge(self):
-        print(self.age)
+        print(f'I`m {self.age} years old')
 
     def sayGender(self):
-        print(self.gender)
+        print(f'And I`m a {self.gender}')
 
