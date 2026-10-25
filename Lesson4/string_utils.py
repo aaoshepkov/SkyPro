@@ -47,7 +47,7 @@ class StringUtils:
         try:
             res = string.index(symbol) > -1
         except ValueError:
-            pass
+            print('Something`s gone wrong, try again.')
 
         return res
 
