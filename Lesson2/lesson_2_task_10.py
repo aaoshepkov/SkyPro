@@ -2,8 +2,6 @@ def bank(x, y):
     percent = 10.0
     for _ in range(y):
         x *= 1 + percent/100
-    print(x)
+    print(round(x, 2))
 
 bank(100, 5)
-
-
