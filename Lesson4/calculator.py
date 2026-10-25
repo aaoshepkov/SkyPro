@@ -22,5 +22,5 @@ class Calculator:
         res = 0
         for i in arr:
             res += i
-        avg = self.div(sum, len_of_arr)
+        avg = self.div(res, len_of_arr)
         return avg
