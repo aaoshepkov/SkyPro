@@ -17,6 +17,7 @@ from selenium.webdriver.common.keys import Keys
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 driver.maximize_window()
 
+sleep(5)
 
 driver.get('https://www.labirint.ru/')
 WebDriverWait(driver, 5)
